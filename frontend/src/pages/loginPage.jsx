@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import './loginPage.css';
-
 const LoginPage = () => {
-  const { login } = useAuth();
+  const { login, isAuthenticated, loading } = useAuth();  // Get isAuthenticated and loading from AuthContext
   const navigate = useNavigate();
-
+  
   const [form, setForm] = useState({ id: '', password: '' });
   const [error, setError] = useState('');
 
@@ -18,14 +13,19 @@ const LoginPage = () => {
     e.preventDefault();
     setError('');
     try {
-        console.log("Attempting to log in...");
+      console.log("Attempting to log in...");
       await login(form);
       console.log("Login successful!");
-      navigate('/');
     } catch (err) {
       setError('Invalid credentials. Please try again.');
     }
   };
+
+  useEffect(() => {
+    if (!loading && isAuthenticated) {
+      navigate('/');
+    }
+  }, [loading, isAuthenticated, navigate]);
 
   return (
     <div className="login-container">
@@ -49,7 +49,7 @@ const LoginPage = () => {
             required
           />
           {error && <p className="error">{error}</p>}
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>Login</button>
         </form>
         <p className="register-link">
           Don&apos;t have an account? <a href="/register">Register</a>
@@ -58,5 +58,3 @@ const LoginPage = () => {
     </div>
   );
 };
-
-export default LoginPage;
