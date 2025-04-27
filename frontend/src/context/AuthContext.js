@@ -13,12 +13,16 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     axios.get("/api/auth/me", { withCredentials: true })
       .then(res => {
+        console.log("User data:", res.data);  // Log the user data
         setUser(res.data);
       })
       .catch(() => {
         setUser(null);
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        console.log("Finished loading authentication state");
+        setLoading(false);
+      });
   }, []);
 
   // Login
@@ -26,6 +30,7 @@ export const AuthProvider = ({ children }) => {
     const res = await axios.post("/api/auth/login", credentials, {
       withCredentials: true
     });
+    console.log("Login response:", res);
     setUser(res.data.user);
     return res;
   };

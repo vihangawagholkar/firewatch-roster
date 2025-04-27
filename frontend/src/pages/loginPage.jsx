@@ -28,8 +28,10 @@ const LoginPage = () => {
 
   useEffect(() => {
     // Only redirect after loading finishes and isAuthenticated becomes true
+    console.log("Checking redirect condition:", { loading, isAuthenticated });
     if (!loading && isAuthenticated) {
       console.log("Redirecting to homepage...");
+      console.log("navigate function:", navigate);
       navigate('/');  // Redirect to home if authenticated
     }
   }, [loading, isAuthenticated, navigate]);
