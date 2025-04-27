@@ -40,7 +40,7 @@ const Home = () => {
   
     setUserId(newId);
   
-    axios.get(`http://localhost:3001/api/roster/load-draft/${newId}`)
+    axios.get(`https://firewatch-roster.onrender.com/api/roster/load-draft/${newId}`)
       .then(res => {
         const { employees, startDate, endDate } = res.data;
         if (employees) setEmployees(employees);
@@ -63,7 +63,7 @@ const Home = () => {
 
   const loadDraft = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3001/api/roster/load-draft/${id}`);
+      const res = await axios.get(`https://firewatch-roster.onrender.com/api/roster/load-draft/${id}`);
       const { employees, startDate, endDate } = res.data;
       setEmployees(employees || []);
       setStartDate(startDate || '');
@@ -90,7 +90,7 @@ const Home = () => {
 
   const handleSaveDraft = async () => {
     try {
-      await axios.post('http://localhost:3001/api/roster/save-draft', {
+      await axios.post('https://firewatch-roster.onrender.com/api/roster/save-draft', {
         userId,
         employees,
         startDate,
@@ -105,7 +105,7 @@ const Home = () => {
 
   const handleGenerateRoster = async () => {
     try {
-      const res = await axios.post('http://localhost:3001/api/roster/generate', {
+      const res = await axios.post('https://firewatch-roster.onrender.com/api/roster/generate', {
         employees,
         startDate,
         endDate,
@@ -126,7 +126,7 @@ const Home = () => {
   const handlePreviewRoster = async () => {
     console.log('Preview payload:', employees);
     try {
-      const res = await axios.post('http://localhost:3001/api/roster/preview', {
+      const res = await axios.post('https://firewatch-roster.onrender.com/api/roster/preview', {
         employees,
         startDate,
         endDate,
