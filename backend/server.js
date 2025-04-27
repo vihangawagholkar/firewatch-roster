@@ -1,4 +1,3 @@
-console.log("Current directory:", __dirname);
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
@@ -18,9 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));  // CORS
-
+const mongoURI = process.env.MONGODB_URI;
+console.log("Mongo URI:", mongoURI); // Log to check the value of the URI
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI , {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
