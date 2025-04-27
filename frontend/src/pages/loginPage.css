@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 1rem;
     background: linear-gradient(rgba(10, 15, 10, 0.9), rgba(10, 15, 10, 0.9)),
-      url('/Users/vihangawagholkar/Desktop/firewatch/frontend/src/pages/ryan-hoffman-famtUWEBH_Y-unsplash.jpg') no-repeat center center/cover;
+      url('../images/ryan-hoffman-famtUWEBH_Y-unsplash.jpg') no-repeat center center/cover;
     font-family: 'Share Tech Mono', monospace;
   }
   
