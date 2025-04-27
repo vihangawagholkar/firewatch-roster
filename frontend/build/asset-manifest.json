@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bc6db699.css",
+    "main.js": "/static/js/main.83dfd60e.js",
+    "static/media/ryan-hoffman-famtUWEBH_Y-unsplash.jpg": "/static/media/ryan-hoffman-famtUWEBH_Y-unsplash.b85dc53faf95c4543d48.jpg",
+    "index.html": "/index.html",
+    "main.bc6db699.css.map": "/static/css/main.bc6db699.css.map",
+    "main.83dfd60e.js.map": "/static/js/main.83dfd60e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc6db699.css",
+    "static/js/main.83dfd60e.js"
+  ]
+}

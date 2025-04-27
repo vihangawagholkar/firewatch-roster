@@ -25,6 +25,15 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
 });
 
+// Serve static files from the React app (adjust path to frontend/build)
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
+
+// Serve index.html when accessing the root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
+});
+
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/employees', employeeRoutes);
