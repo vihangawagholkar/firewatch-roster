@@ -41,13 +41,7 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/roster', rosterRoutes);
 
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Catch-all route to handle React routing
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 // Server setup
 const PORT = process.env.PORT || 3001;
