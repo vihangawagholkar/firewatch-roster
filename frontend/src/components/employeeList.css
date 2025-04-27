@@ -1,0 +1,153 @@
+.employee-list-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1f241f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0003;
+    animation: fadeInDown 0.5s ease-out;
+  }
+  
+  .employee-list-container h3 {
+    margin-bottom: 1rem;
+    color: #aaffaa;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .employee-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .employee-card {
+    background-color: #2d332d;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #e2e8ce;
+    transition: transform 0.2s ease;
+  }
+  
+  .employee-card:hover {
+    transform: scale(1.02);
+    border-color: #88cc88;
+  }
+  
+  .emp-main {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .emp-rank {
+    color: #91c78a;
+  }
+  
+  .emp-name {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .emp-battery {
+    font-style: italic;
+    color: #c5c5a4;
+  }
+  
+  .emp-leaves {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #9fbfa6;
+  }
+  
+  .empty-message {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+  }
+
+  .emp-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.6rem;
+    gap: 0.5rem;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .edit-btn {
+    background-color: #446944;
+    color: #e2e8ce;
+  }
+  
+  .edit-btn:hover {
+    background-color: #5b8a5b;
+  }
+  
+  .delete-btn {
+    background-color: #6c2e2e;
+    color: #f8d7da;
+  }
+  
+  .delete-btn:hover {
+    background-color: #a44;
+  }
+  .leave-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+  }
+  
+  .leave-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .leave-list li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    background: #2a2f2a;
+    padding: 0.4rem;
+    border-radius: 4px;
+    color: #e2e8ce;
+  }
+
+  .weekend-leave {
+    background-color: #553333 !important;
+    color: #fbb;
+    border-radius: 4px;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  li button {
+    margin-left: 0.5rem;
+    background-color: transparent;
+    color: #ffaaaa;
+    border: none;
+    cursor: pointer;
+  }
+  
+  li button:hover {
+    color: #ff6666;
+  }

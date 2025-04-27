@@ -1,0 +1,318 @@
+/* Military Font (Google Fonts or local import recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  background-color: #1a1e1c;
+  color: #e2e8ce;
+}
+
+/* Hero Section */
+.hero-banner {
+  background: linear-gradient(145deg, #223322, #111);
+  padding: 2rem;
+  border-bottom: 2px solid #444;
+  animation: fadeInDown 1s ease-out;
+  text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #b3f5a3;
+    text-shadow: 2px 2px 8px #000;
+  }
+  
+  .hero-banner p {
+    font-size: 1.2rem;
+    color: #9fbfa6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+/* Form and Layout */
+section {
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+input, select {
+  padding: 0.5rem;
+  margin: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #2d332d;
+  color: #e2e8ce;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #aaffaa;
+  background-color: #3d483d;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  background-color: #446944;
+  color: #e2e8ce;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5b8a5b;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  position: relative;
+  bottom: 0;
+  width:100%;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  input, select, button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3e593e;
+    color: #e2e8ce;
+    border: 2px solid #5b8a5b;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background-color: #5b8a5b;
+    border-color: #aaffaa;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: scale(0.97);
+    background-color: #2e422e;
+  }
+
+  .date-range {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .date-range label {
+    margin-right: 0.3rem;
+  }
+
+  .form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-grid > div {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-grid .full-width {
+    flex: 1 1 100%;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #aaffaa;
+  }
+
+  .status-message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #223322;
+    color: #aaffaa;
+    border: 1px solid #5b8a5b;
+    border-radius: 6px;
+    font-size: 1rem;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .date-inputs label {
+    font-weight: bold;
+    color: #9fbfa6;
+  }
+  
+  .date-inputs input[type="date"] {
+    padding: 0.5rem;
+    background-color: #2d332d;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: #e2e8ce;
+    font-family: 'Share Tech Mono', monospace;
+    transition: all 0.3s ease;
+  }
+  
+  .date-inputs input[type="date"]:focus {
+    border-color: #aaffaa;
+    background-color: #3d483d;
+  }
+
+  .date-inputs {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+.employee-list-container {
+    /* max-width: 700px; */
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #1f241f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    animation: fadeInDown 0.5s ease-out;
+   
+  }
+  
+  .employee-list-container h3 {
+    margin-bottom: 1rem;
+    color: #aaffaa;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 0.5rem;
+  }
+  
+  .employee-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .employee-list-container li {
+    padding: 0.5rem;
+    border-bottom: 1px dashed #333;
+    color: #e2e8ce;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  
+  .employee-list-container li:last-child {
+    border-bottom: none;
+  }
+
+  .logout-btn-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #2e422e;
+    color: #aaffaa;
+    border: 2px solid #5b8a5b;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .logout-btn-fixed:hover {
+    background-color: #446944;
+    border-color: #aaffaa;
+    transform: translateY(-2px);
+  }
+  
+  .logout-btn-fixed:active {
+    background-color: #223322;
+    transform: scale(0.96);
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }

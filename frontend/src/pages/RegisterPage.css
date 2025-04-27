@@ -1,0 +1,103 @@
+/* src/pages/RegisterPage.css */
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1e1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #223322, #111);
+    height: 100vh;
+    padding: 2rem;
+  }
+  
+  .register-container {
+    background-color: #2d332d;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    /* max-width: 400px; */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #b3f5a3;
+    margin-bottom: 1rem;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #aaffaa;
+    text-align: left;
+    margin-bottom: 0.3rem;
+  }
+  
+  input {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #3d483d;
+    color: #e2e8ce;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: #aaffaa;
+    background-color: #4d5e4d;
+    outline: none;
+  }
+  
+  .register-button {
+    padding: 0.8rem;
+    background-color: #446944;
+    color: #e2e8ce;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #5b8a5b;
+  }
+  
+  .login-link {
+    margin-top: 1rem;
+    color: #9fbfa6;
+  }
+  
+  .login-link a {
+    color: #b3f5a3;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }

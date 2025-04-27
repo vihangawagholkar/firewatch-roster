@@ -1,0 +1,122 @@
+/* Background styling */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: linear-gradient(rgba(10, 15, 10, 0.9), rgba(10, 15, 10, 0.9)),
+      url('/Users/vihangawagholkar/Desktop/firewatch/frontend/src/pages/ryan-hoffman-famtUWEBH_Y-unsplash.jpg') no-repeat center center/cover;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  
+  /* Box styling */
+  .login-box {
+    background-color: #2d332d;
+    border: 1px solid #5b8a5b;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  /* Logo */
+  .login-logo {
+    font-size: 2rem;
+    color: #aaffaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Logo animation */
+  .animate-logo {
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  
+  /* Input fields */
+  form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.6rem 0;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1f241f;
+    color: #e2e8ce;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #aaffaa;
+    background-color: #3d483d;
+  }
+  
+  /* Button */
+  .login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #3e593e;
+    color: #e2e8ce;
+    border: 2px solid #5b8a5b;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5b8a5b;
+    border-color: #aaffaa;
+  }
+  
+  /* Error message */
+  .error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Register link */
+  .register-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #9fbfa6;
+  }
+  
+  .register-link a {
+    color: #aaffaa;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      text-shadow: 0 0 10px #aaffaa;
+    }
+    50% {
+      transform: scale(1.05);
+      text-shadow: 0 0 20px #aaffaa;
+    }
+    100% {
+      transform: scale(1);
+      text-shadow: 0 0 10px #aaffaa;
+    }
+  }

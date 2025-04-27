@@ -1,0 +1,81 @@
+.employeeForm{
+    /* width:30%; */
+    margin:auto;
+}
+
+.input{
+    margin: 0 1rem ;
+}
+
+#leave{
+    
+    width: 18rem;
+}
+
+#rank{
+    padding-right: 1rem;
+}
+
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .form-grid > * {
+    flex: 1 1 150px;
+    min-width: 150px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-grid {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .leave-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .leave-picker input[type="date"] {
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #2d332d;
+    color: #e2e8ce;
+  }
+  
+  .leave-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .leave-list li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    background: #2a2f2a;
+    padding: 0.4rem;
+    border-radius: 4px;
+    color: #e2e8ce;
+  }
+
+  .form-grid input[type="tel"],
+.form-grid select,
+.form-grid input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #2d332d;
+  color: #e2e8ce;
+  box-sizing: border-box;
+}
