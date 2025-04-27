@@ -16,7 +16,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));  // CORS
+app.use(cors({ credentials: true, origin: 'https://firewatch-roster.onrender.com' }));  // CORS
 const mongoURI = process.env.MONGODB_URI;
 console.log("Mongo URI:", mongoURI); // Log to check the value of the URI
 // MongoDB connection
