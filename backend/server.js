@@ -1,3 +1,4 @@
+console.log("Current directory:", __dirname);
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
