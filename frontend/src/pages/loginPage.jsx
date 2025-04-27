@@ -27,10 +27,11 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
+    // If loading is false and isAuthenticated is true, redirect to home
     if (!loading && isAuthenticated) {
       navigate('/');
     }
-  }, [loading, isAuthenticated, navigate]);
+  }, [loading, isAuthenticated, navigate]);  // Dependencies to check loading and isAuthenticated
 
   return (
     <div className="login-container">
