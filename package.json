@@ -2,11 +2,11 @@
   "name": "firewatch",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
-    "build": "npm run build"
+    "build": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
