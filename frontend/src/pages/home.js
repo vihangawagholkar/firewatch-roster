@@ -126,7 +126,7 @@ const Home = () => {
   const handlePreviewRoster = async () => {
     console.log('Preview payload:', employees);
     try {
-      const res = await axios.post('http://localhost:3001/api/roster/preview', {
+      const res = await axios.post('https://firewatch-roster.onrender.com/api/roster/preview', {
         employees,
         startDate,
         endDate,
