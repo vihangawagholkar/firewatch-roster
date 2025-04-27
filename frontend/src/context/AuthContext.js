@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import axios from "../api/api"; // Make sure this has baseURL + withCredentials: true
+import axios from "../api/api"; // Ensure this has baseURL + withCredentials: true
 import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
@@ -49,9 +49,7 @@ export const AuthProvider = ({ children }) => {
       isAuthenticated: !!user,
       loading
     }}>
-      {children
-      
-      }
+      {children}
     </AuthContext.Provider>
   );
 };

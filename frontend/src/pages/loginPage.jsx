@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';  // Import useEffect here
+import React, { useState, useEffect } from 'react';  
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './loginPage.css';
 
 const LoginPage = () => {
-  const { login, isAuthenticated, loading } = useAuth();  // Get isAuthenticated and loading from AuthContext
+  const { login, isAuthenticated, loading } = useAuth();
   const navigate = useNavigate();
   
   const [form, setForm] = useState({ id: '', password: '' });
@@ -27,11 +27,16 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    // If loading is false and isAuthenticated is true, redirect to home
+    // Only redirect after loading finishes and isAuthenticated becomes true
     if (!loading && isAuthenticated) {
-      navigate('/');
+      console.log("Redirecting to homepage...");
+      navigate('/');  // Redirect to home if authenticated
     }
-  }, [loading, isAuthenticated, navigate]);  // Dependencies to check loading and isAuthenticated
+  }, [loading, isAuthenticated, navigate]);
+
+  if (loading) {
+    return <div>Loading...</div>; // Show loading state while authenticating
+  }
 
   return (
     <div className="login-container">
