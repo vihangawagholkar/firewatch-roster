@@ -13,11 +13,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     axios.get("/api/auth/me", { withCredentials: true })
       .then(res => {
-        console.log("User data:", res.data);  // Log the user data
+        console.log("User data:", res.data);  // Log the actual response
         setUser(res.data);
       })
-      .catch(() => {
-        setUser(null);
+      .catch(err => {
+        console.error("Error fetching user data:", err);
+        setUser(null);  // Set user to null if there's an error (e.g., not logged in)
       })
       .finally(() => {
         console.log("Finished loading authentication state");
