@@ -9,7 +9,7 @@ const rosterRoutes = require('./routes/roster')
 
 const path = require('path');
 
-
+console.log("Current directory:", __dirname);
 dotenv.config();
 const app = express();
 
